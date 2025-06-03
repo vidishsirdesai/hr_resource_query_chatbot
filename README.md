@@ -178,4 +178,4 @@ At the start of the development, both OpenAI and HuggingFace were tried with to 
 - Reinforcement learning could be implemented where users are allowed to provide feedback on the results which then can be used to improve the RAG system over time.
 
 ## Demo
-- Link: 
+- Link: https://github.com/vidishsirdesai/hr_resource_query_chatbot/blob/main/artifacts/hr_resource_query_chatbot_demo.mp4.
