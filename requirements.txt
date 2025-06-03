@@ -1,0 +1,13 @@
+pandas
+faker
+uvicorn
+fastapi
+pydantic
+rag_system
+typing
+models
+langchain
+langchain_huggingface
+langchain_community
+langchain_chroma
+langchain_core
