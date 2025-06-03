@@ -1,0 +1,101 @@
+name,skills,experience_years,past_projects,availability
+Anne Washington,"['AR/VR', 'GraphQL', 'CI/CD']",2,"['Fintech Application', 'Fraud Detection System']",Partially Available
+Jeffrey Jefferson,"['PHP', 'SQL']",14,['Fraud Detection System'],Available
+April Peck,"['Microservices', 'React Native']",9,['Mobile Game Development'],Partially Available
+Karl Knight,"['iOS Development', 'AWS', 'CI/CD']",3,['E-commerce Platform'],Partially Available
+Holly Roberts,"['Angular', 'React Native', 'Data Science']",9,"['Predictive Maintenance System', 'Fraud Detection System']",Available
+Kelly Werner,"['Kafka', 'GraphQL', 'Cybersecurity', '.NET', 'Terraform']",1,"['Supply Chain Optimization', 'Fraud Detection System']",Partially Available
+Connie Long,"['Hadoop', 'Blockchain', 'Flutter']",14,"['Predictive Maintenance System', 'Fintech Application', 'IoT Dashboard']",Fully Booked
+George Delgado,"['Data Science', 'TypeScript', 'GCP', 'NoSQL']",12,"['CRM System', 'Real-time Data Processing']",Partially Available
+Brian Riddle,"['Kubernetes', 'Power BI', 'Deep Learning']",6,"['IoT Dashboard', 'Fraud Detection System', 'Supply Chain Optimization']",Partially Available
+Erika Garrison,['Kubernetes'],7,"['Predictive Maintenance System', 'Blockchain Voting System', 'Real-time Data Processing']",Partially Available
+Elizabeth Grimes,['GCP'],6,"['Natural Language Processing Engine', 'IoT Dashboard']",Available
+Joseph Allen,"['Microservices', 'Kafka', 'Cybersecurity', 'Tableau', 'JavaScript']",5,"['Healthcare Management System', 'Data Warehousing Solution', 'Predictive Maintenance System']",Available
+Marcus Rivers,"['Ansible', 'Terraform', 'Power BI']",5,['Fintech Application'],Fully Booked
+Cynthia Harris,"['Kubernetes', 'Ansible', 'NoSQL', 'PHP']",4,"['E-commerce Platform', 'Cybersecurity Audit', 'Predictive Maintenance System']",Partially Available
+Jose Jenkins,"['Azure', 'Blockchain', 'Flutter', 'Ansible', 'NLP']",5,['E-commerce Platform'],Partially Available
+Christopher Ibarra,"['Kafka', 'SQL', 'Blockchain', 'Tableau', 'Java']",15,"['Cloud Migration Project', 'Real-time Data Processing']",Partially Available
+Jonathan Dean,"['Blockchain', 'SQL']",15,"['Fintech Application', 'Fraud Detection System']",Fully Booked
+John Smith,"['Python', 'CI/CD', 'AR/VR', 'Kafka']",8,"['Cloud Migration Project', 'Supply Chain Optimization']",Available
+Timothy Gonzalez,"['Agile', 'GCP']",6,"['Healthcare Management System', 'Educational Platform']",Fully Booked
+Taylor Ashley,"['Machine Learning', 'Spark']",7,"['Data Warehousing Solution', 'Fraud Detection System', 'Social Media Analytics']",Partially Available
+Melanie Murray,"['Python', 'REST APIs', 'React', 'TypeScript', 'Flutter']",12,['Customer Loyalty Program'],Partially Available
+Eric Flores,"['Ruby on Rails', 'Agile']",11,"['Educational Platform', 'Cybersecurity Audit', 'Predictive Maintenance System']",Partially Available
+Brian Chapman,"['Unity', 'Node.js']",9,"['Augmented Reality App', 'Real-time Data Processing', 'Cybersecurity Audit']",Partially Available
+Joshua Hahn,"['Deep Learning', 'NLP', 'Node.js']",8,"['Healthcare Management System', 'AI-powered Chatbot', 'Cybersecurity Audit']",Available
+Jane Davis,"['Cybersecurity', 'Kubernetes', 'Terraform', 'Deep Learning', 'Microservices']",9,"['IoT Dashboard', 'Mobile Game Development', 'Natural Language Processing Engine']",Available
+Christopher Kline,['Microservices'],13,"['Social Media Analytics', 'Educational Platform']",Available
+Michael Sims,['TypeScript'],2,"['Mobile Game Development', 'IoT Dashboard']",Fully Booked
+Joshua Hartman,"['React Native', 'Tableau', 'Ruby on Rails', 'Go', 'JavaScript']",8,"['Augmented Reality App', 'Fraud Detection System', 'Blockchain Voting System']",Available
+Lisa Sutton,"['React Native', 'Cybersecurity', 'NLP', 'TypeScript']",10,"['Mobile Game Development', 'CRM System', 'Cloud Migration Project']",Fully Booked
+Edward Woods,['PHP'],15,"['Social Media Analytics', 'Fintech Application', 'CRM System']",Partially Available
+John Cervantes,"['Tableau', 'Flutter', 'Agile']",12,['Fintech Application'],Partially Available
+Matthew Lynch,"['Spark', 'Blockchain', 'React']",13,"['Supply Chain Optimization', 'Fraud Detection System', 'Customer Loyalty Program']",Available
+Daniel Weiss,"['Vue.js', 'Azure', 'DevOps', 'Go', 'GraphQL']",15,"['Data Warehousing Solution', 'Cybersecurity Audit']",Available
+Marcus Turner,"['Blockchain', 'React', 'Flutter', 'Java']",12,"['CRM System', 'Fraud Detection System', 'Educational Platform']",Partially Available
+Julie Evans,"['Cybersecurity', 'Scrum', 'Deep Learning']",9,['Data Warehousing Solution'],Available
+Christine Ramos,"['Terraform', 'Python']",5,['CRM System'],Partially Available
+Timothy Valenzuela,"['AR/VR', 'NoSQL', 'AWS', 'React']",5,"['Healthcare Management System', 'IoT Dashboard', 'Fintech Application']",Available
+Mandy Cook,"['REST APIs', 'Blockchain', 'Power BI', 'Angular', 'Spark']",3,"['Blockchain Voting System', 'Natural Language Processing Engine']",Partially Available
+Matthew Brown,"['PHP', 'Microservices']",10,['Predictive Maintenance System'],Available
+Todd Martinez,['C#'],14,['CRM System'],Fully Booked
+Roy Shaffer,"['Hadoop', 'Python']",10,"['Healthcare Management System', 'Blockchain Voting System']",Partially Available
+Valerie Macdonald,"['Kafka', 'Microservices', 'Docker']",11,['Data Warehousing Solution'],Available
+Tammy Sanchez,"['C#', 'Terraform', 'NLP', 'AR/VR', 'JavaScript']",10,['Blockchain Voting System'],Partially Available
+Robert Carroll,"['iOS Development', 'Deep Learning', 'React Native', 'GraphQL']",3,"['Supply Chain Optimization', 'IoT Dashboard']",Available
+Allison Gonzalez,"['React', 'Flutter']",7,"['Real-time Data Processing', 'Healthcare Management System']",Partially Available
+Dennis Vasquez,"['iOS Development', 'Kubernetes', 'Blockchain', 'TypeScript', 'Tableau']",1,['Cybersecurity Audit'],Available
+Carl Sweeney,"['Azure', 'CI/CD', 'Blockchain', 'Angular', 'Tableau']",4,['CRM System'],Partially Available
+Ashley Simpson,"['Java', 'Angular', 'Power BI']",15,"['Augmented Reality App', 'Cloud Migration Project']",Fully Booked
+Sandra Morton,"['Ansible', 'Azure', 'Kubernetes', 'Angular', 'Flutter']",7,['Mobile Game Development'],Available
+Mary Leon,"['Docker', 'Cybersecurity', 'GraphQL']",9,"['Augmented Reality App', 'Educational Platform', 'Real-time Data Processing']",Available
+Sheila Monroe,['React'],5,"['Healthcare Management System', 'Social Media Analytics']",Available
+Eric Holland,"['Node.js', 'Deep Learning', 'Microservices']",4,"['Cybersecurity Audit', 'Real-time Data Processing', 'CRM System']",Available
+Jeffery Lawrence,['Spark'],7,"['Fintech Application', 'Real-time Data Processing', 'Customer Loyalty Program']",Partially Available
+Andre Beasley,['Terraform'],6,"['Cybersecurity Audit', 'Customer Loyalty Program']",Available
+Jennifer Jenkins,"['Agile', 'JavaScript', 'Node.js', '.NET']",4,"['Blockchain Voting System', 'Natural Language Processing Engine']",Available
+Brittany Cox,"['Deep Learning', 'GraphQL', 'Spark', 'AR/VR']",1,"['Social Media Analytics', 'Blockchain Voting System']",Available
+Joseph Moore,['Go'],10,"['Augmented Reality App', 'Fintech Application']",Fully Booked
+Randy George,"['Power BI', 'GraphQL', 'React']",12,"['Data Warehousing Solution', 'IoT Dashboard']",Available
+Ashley Diaz,"['Tableau', 'Kubernetes', 'GCP']",14,['Real-time Data Processing'],Fully Booked
+Sarah Perez,['Android Development'],12,"['Customer Loyalty Program', 'Supply Chain Optimization', 'Fintech Application']",Fully Booked
+Krystal Munoz,['Machine Learning'],8,"['Augmented Reality App', 'Customer Loyalty Program']",Partially Available
+Misty Camacho,['Python'],2,"['Mobile Game Development', 'E-commerce Platform', 'Blockchain Voting System']",Available
+Carlos Miller,"['Unity', 'TypeScript']",5,"['Mobile Game Development', 'Augmented Reality App']",Available
+Bridget Martin,"['C#', 'Power BI', 'Data Science']",11,"['E-commerce Platform', 'Data Warehousing Solution']",Fully Booked
+Teresa Watson,['NoSQL'],13,"['Customer Loyalty Program', 'Natural Language Processing Engine']",Partially Available
+Nicholas Williams,"['JavaScript', 'Blockchain', 'CI/CD', 'Deep Learning']",14,"['Data Warehousing Solution', 'Educational Platform']",Fully Booked
+Bill Lee,"['Hadoop', 'CI/CD', 'Ruby on Rails']",1,"['Natural Language Processing Engine', 'Supply Chain Optimization']",Fully Booked
+Courtney Brennan,"['Microservices', 'Ansible']",2,['IoT Dashboard'],Fully Booked
+Natalie Clements,['Azure'],8,['CRM System'],Fully Booked
+David Good,['JavaScript'],15,['Mobile Game Development'],Available
+Ian Brown,"['Cybersecurity', 'React Native', 'Java']",2,['Data Warehousing Solution'],Available
+Emma Fuller,"['Deep Learning', 'Terraform', 'Hadoop', 'Kafka']",1,['Fintech Application'],Fully Booked
+Joshua Mercado,"['Hadoop', 'Power BI', 'SQL', 'NoSQL']",13,"['Natural Language Processing Engine', 'IoT Dashboard', 'Social Media Analytics']",Available
+Teresa Andrade,"['SQL', 'Power BI', 'Tableau', 'Kubernetes', 'React']",14,['Natural Language Processing Engine'],Fully Booked
+Laura Richardson,"['Java', 'React', 'REST APIs', 'Kubernetes']",10,"['Mobile Game Development', 'E-commerce Platform']",Partially Available
+Jesus Harris,['Machine Learning'],6,"['Natural Language Processing Engine', 'Mobile Game Development', 'Fintech Application']",Fully Booked
+Eric Hammond,"['Spark', 'C#', 'iOS Development', 'Scrum', 'React Native']",5,"['Cybersecurity Audit', 'Augmented Reality App']",Partially Available
+Chad Lewis,"['JavaScript', 'Blockchain']",9,"['Healthcare Management System', 'Blockchain Voting System']",Fully Booked
+John Frank,"['Kafka', 'React Native', 'JavaScript', 'Agile', 'Cybersecurity']",1,"['Cybersecurity Audit', 'Blockchain Voting System', 'Real-time Data Processing']",Partially Available
+Paula Williams,['React'],12,"['Cloud Migration Project', 'Natural Language Processing Engine', 'AI-powered Chatbot']",Partially Available
+Amber Thomas,"['AWS', 'iOS Development', 'Python']",7,['E-commerce Platform'],Fully Booked
+Debra Fernandez,"['AWS', 'iOS Development', 'Java', 'Flutter', 'Power BI']",3,"['Cybersecurity Audit', 'Supply Chain Optimization']",Partially Available
+Gina Collins,"['Cybersecurity', 'AR/VR', 'Spark', 'Kubernetes']",11,['Blockchain Voting System'],Available
+Eric Edwards,"['Java', 'REST APIs']",8,"['Cybersecurity Audit', 'Educational Platform', 'Fintech Application']",Partially Available
+Gary Wolfe,"['Azure', 'Flutter', 'Ansible', 'TypeScript']",11,"['Augmented Reality App', 'CRM System', 'Blockchain Voting System']",Fully Booked
+Shannon Hernandez,['Scrum'],15,"['Predictive Maintenance System', 'Cloud Migration Project', 'E-commerce Platform']",Partially Available
+Patricia Mcknight,"['Hadoop', 'JavaScript', 'Unity', 'React Native']",11,"['Cybersecurity Audit', 'Data Warehousing Solution', 'Real-time Data Processing']",Partially Available
+Timothy Robertson,"['PHP', 'Terraform', 'Android Development', 'CI/CD']",9,"['Healthcare Management System', 'Customer Loyalty Program']",Partially Available
+Kimberly Fernandez,"['Data Science', 'GCP', 'Hadoop', 'DevOps', 'Python']",9,['Blockchain Voting System'],Fully Booked
+Isaiah Hodges,"['Spark', 'Go', 'Python', 'NoSQL', 'SQL']",14,"['Cloud Migration Project', 'Blockchain Voting System', 'Fraud Detection System']",Partially Available
+Hailey Kelly,['Angular'],6,"['Cloud Migration Project', 'Data Warehousing Solution']",Fully Booked
+Michelle Castillo,['Data Science'],10,"['AI-powered Chatbot', 'Social Media Analytics', 'Cloud Migration Project']",Partially Available
+Molly Rose,"['Microservices', 'AWS', 'Ansible', 'Hadoop', 'Ruby on Rails']",15,"['Social Media Analytics', 'Augmented Reality App', 'Supply Chain Optimization']",Partially Available
+Cheryl Dixon,"['NoSQL', 'SQL', 'REST APIs', 'DevOps']",7,['E-commerce Platform'],Available
+Patrick Parker,['Agile'],14,"['Natural Language Processing Engine', 'Social Media Analytics', 'Real-time Data Processing']",Fully Booked
+Kevin Wright,"['Hadoop', 'Power BI', 'Flutter']",5,['IoT Dashboard'],Fully Booked
+Jeffrey Hill,"['GCP', 'AR/VR', 'Deep Learning']",6,['Customer Loyalty Program'],Fully Booked
+Thomas Mays,"['C#', 'Data Science', 'AWS', 'Angular', 'CI/CD']",10,"['Customer Loyalty Program', 'Blockchain Voting System', 'Mobile Game Development']",Available
+Karen Garrett,"['React Native', 'Ansible']",7,['Natural Language Processing Engine'],Fully Booked
+Bobby Montgomery,"['CI/CD', 'Angular', 'Tableau']",2,['CRM System'],Partially Available
