@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Assistant Chatbot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column; /* Changed to column to stack header above container */
+            align-items: center; /* Center horizontally */
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .main-header { /* New style for the main header */
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            color: #007bff; /* Blue for the main title */
+        }
+
+        .main-header h1 {
+            margin: 0;
+            font-size: 2.5em; /* Larger font for main title */
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .panel {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1; /* Allows panels to grow and shrink */
+            min-width: 300px; /* Minimum width before wrapping */
+        }
+
+        h1, h2 { /* Existing styles for h1 and h2, now h2 specifically for panel titles */
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Chat Panel Styling */
+        #chat-panel {
+            min-width: 450px;
+        }
+
+        #chat-history {
+            flex-grow: 1;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            overflow-y: auto;
+            max-height: 400px;
+            margin-bottom: 15px;
+            background-color: #fcfcfc;
+            line-height: 1.6;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #d1e7dd; /* Light green */
+            align-self: flex-end;
+            margin-left: auto; /* Pushes to the right */
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #f0f0f0; /* Light gray */
+            align-self: flex-start;
+            margin-right: auto; /* Pushes to the left */
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+                transform: translateY(0);
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        /* Employee Search Panel Styling */
+        #employee-results {
+            flex-grow: 1;
+            overflow-y: auto;
+            max-height: 500px; /* Adjust as needed */
+        }
+
+        .employee-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fcfcfc;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .employee-card h3 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .employee-card p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        .employee-card strong {
+            color: #555;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: none; /* Hidden by default */
+            margin: 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            color: #dc3545;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack panels vertically on small screens */
+            }
+            .panel {
+                min-width: unset; /* Remove min-width to allow full width */
+                width: 100%;
+            }
+            #chat-panel {
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-header">
+        <h1>HR Resource Query Chatbot</h1>
+    </div>
+    <div class="container">
+        <div class="panel" id="chat-panel">
+            <h2>HR Chat Assistant</h2>
+            <div id="chat-history">
+                <div class="message bot-message">Hello! How can I assist you with employee information today?</div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="chat-input" placeholder="Ask about employees...">
+                <button id="send-chat-btn">Send</button>
+            </div>
+            <div id="chat-loading-spinner" class="loading-spinner"></div>
+            <div id="chat-error-message" class="error-message"></div>
+        </div>
+
+        <div class="panel">
+            <h2>Employee Search</h2>
+            <div class="input-group">
+                <input type="text" id="search-input" placeholder="Search by skill, project, or availability...">
+                <button id="search-employee-btn">Search</button>
+            </div>
+            <div id="search-loading-spinner" class="loading-spinner"></div>
+            <div id="search-error-message" class="error-message"></div>
+            <div id="employee-results">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        const chatHistory = document.getElementById('chat-history');
+        const chatInput = document.getElementById('chat-input');
+        const sendChatBtn = document.getElementById('send-chat-btn');
+        const chatLoadingSpinner = document.getElementById('chat-loading-spinner');
+        const chatErrorMessage = document.getElementById('chat-error-message');
+
+        const searchInput = document.getElementById('search-input');
+        const searchEmployeeBtn = document.getElementById('search-employee-btn');
+        const employeeResults = document.getElementById('employee-results');
+        const searchLoadingSpinner = document.getElementById('search-loading-spinner');
+        const searchErrorMessage = document.getElementById('search-error-message');
+
+        const API_BASE_URL = 'http://localhost:8000'; // Your FastAPI backend URL
+
+        // --- Chat Bot Functionality ---
+        async function sendChatMessage() {
+            const query = chatInput.value.trim();
+            if (!query) return;
+
+            addMessageToChatHistory(query, 'user');
+            chatInput.value = '';
+            chatErrorMessage.textContent = '';
+            showSpinner(chatLoadingSpinner, sendChatBtn);
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query }),
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || 'Failed to get response from chatbot.');
+                }
+
+                const data = await response.json();
+                // Check if the chat response is employee search results (as per previous modification)
+                if (data.employees && Array.isArray(data.employees)) {
+                    employeeResults.innerHTML = ''; // Clear previous search results
+                    if (data.employees.length > 0) {
+                        data.employees.forEach(employee => {
+                            displayEmployeeCard(employee);
+                        });
+                        addMessageToChatHistory(data.message || "Here are the employees found based on your chat query:", 'bot');
+                    } else {
+                        addMessageToChatHistory(data.message || "No employees found based on your chat query.", 'bot');
+                    }
+                    employeeResults.scrollIntoView({ behavior: 'smooth' }); // Scroll to results
+                } else {
+                    // Fallback for general chat responses, though the backend is configured for search results
+                    addMessageToChatHistory(data.response, 'bot');
+                }
+
+            } catch (error) {
+                console.error('Chat error:', error);
+                chatErrorMessage.textContent = `Error: ${error.message}`;
+                addMessageToChatHistory("Sorry, I couldn't process your request. Please try again.", 'bot');
+            } finally {
+                hideSpinner(chatLoadingSpinner, sendChatBtn);
+            }
+        }
+
+        function addMessageToChatHistory(message, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', `${sender}-message`);
+            messageDiv.textContent = message;
+            chatHistory.appendChild(messageDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight; // Scroll to bottom
+        }
+
+        sendChatBtn.addEventListener('click', sendChatMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        });
+
+        // --- Employee Search Functionality ---
+        async function searchEmployees() {
+            const query = searchInput.value.trim();
+            if (!query) {
+                employeeResults.innerHTML = '';
+                searchErrorMessage.textContent = 'Please enter a search query.';
+                return;
+            }
+
+            employeeResults.innerHTML = ''; // Clear previous results
+            searchErrorMessage.textContent = '';
+            showSpinner(searchLoadingSpinner, searchEmployeeBtn);
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/employees/search?query=${encodeURIComponent(query)}&top_k=5`, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                    },
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || 'Failed to search employees.');
+                }
+
+                const data = await response.json();
+                if (data.employees && data.employees.length > 0) {
+                    data.employees.forEach(employee => {
+                        displayEmployeeCard(employee);
+                    });
+                } else {
+                    employeeResults.innerHTML = '<p style="text-align: center; color: #666;">No employees found matching your criteria.</p>';
+                }
+            } catch (error) {
+                console.error('Employee search error:', error);
+                searchErrorMessage.textContent = `Error: ${error.message}`;
+                employeeResults.innerHTML = '<p style="text-align: center; color: #dc3545;">Could not retrieve employee data.</p>';
+            } finally {
+                hideSpinner(searchLoadingSpinner, searchEmployeeBtn);
+            }
+        }
+
+        function displayEmployeeCard(employee) {
+            const card = document.createElement('div');
+            card.classList.add('employee-card');
+            card.innerHTML = `
+                <h3>${employee.name}</h3>
+                <p><strong>Skills:</strong> ${employee.skills || 'N/A'}</p>
+                <p><strong>Experience:</strong> ${employee.experience_years} years</p>
+                <p><strong>Past Projects:</strong> ${employee.past_projects || 'N/A'}</p>
+                <p><strong>Availability:</strong> ${employee.availability || 'N/A'}</p>
+            `;
+            employeeResults.appendChild(card);
+        }
+
+        searchEmployeeBtn.addEventListener('click', searchEmployees);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchEmployees();
+            }
+        });
+
+        // --- Utility Functions ---
+        function showSpinner(spinnerElement, buttonElement) {
+            spinnerElement.style.display = 'block';
+            buttonElement.disabled = true;
+        }
+
+        function hideSpinner(spinnerElement, buttonElement) {
+            spinnerElement.style.display = 'none';
+            buttonElement.disabled = false;
+        }
+
+    </script>
+</body>
+</html>
