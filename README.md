@@ -179,3 +179,5 @@ At the start of the development, both OpenAI and HuggingFace were tried with to 
 
 ## Demo
 - Link: https://github.com/vidishsirdesai/hr_resource_query_chatbot/blob/main/artifacts/hr_resource_query_chatbot_demo.mp4.
+
+Please download the video to watch the demo.
