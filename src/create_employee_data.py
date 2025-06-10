@@ -89,4 +89,3 @@ if __name__ == "__main__":
     # index=False prevents Pandas from writing the DataFrame index as a column in the CSV.
     df_employee.to_csv("../data/employee_dataset.csv", index=False)
     print("Employee dataset generated and saved to ../data/employee_dataset.csv")
-
