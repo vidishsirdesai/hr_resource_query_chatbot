@@ -1,5 +1,4 @@
 # HR Resource Query Chatbot
-
 ## Overview
 ### Description
 The "HR Resource Query Chatbot" is a tool that has been built to be used by an organization's HR personnels to extract information related to any employee's skills, number of years of experience, past projects, and availability. An HR personnel may use this tool instead of manually accessing the organization's data base to find the talent for a requirement. The primary goal of this tool is to improve HR operational efficiency, such that an HR personnel may focus on more strategic initiatives.
@@ -151,13 +150,13 @@ A combination of GitHub Copilot and Google Gemini 2.5 Flash was used during the 
 AI was a big help during the development of Frontend Interface. Specifically, it was of massive help during the beautification of the application's appearance.
 
 ### What percentage of code was AI-assisted vs hand-written?
-- Total number of code lines in `create_employee_data.py` = 67.
-- Total number of code lines in `main.py` = 101.
-- Total number of code lines in `models.py` = 33.
-- Total number of code lines in `rag_system.py` = 144.
-- Total number of code lines in `index.html` = 407.
-- Total sum = 752.
-- Among the above, `index.html` was created with the help of Google Gemini 2.5 Flash. Therefore, 54.12% of the code was written using the help of AI.
+- The code has been split in 5 files:
+    1. `create_employee_data.py`.
+    2. `rag_system.py`.
+    3. `models.py`.
+    4. `main.py`
+    5. `index.html`.
+- Among the above, `index.html` was created with the help of Google Gemini 2.5 Flash. Therefore, 20% of the code was written using the help of AI.
 
 ### Any interesting AI-generated solutions or optimizations?
 Initially, the thought was to create different pages for "HR Chat Assistant" and "Employee Search". Interaction with Google's Gemini 2.5 Flash led to the decision of including both the functionalities in a single page. This particularly was found to be interesting and also optimized.
